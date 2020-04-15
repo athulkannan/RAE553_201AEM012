@@ -20,7 +20,7 @@ class Item(Resource):
         return item, 201
 
 class Itemlist(Resource):
-    def post(self, name):
+    def get(self):
         return {'items' : items}
 
 api.add_resource(Item, '/item/<string:name>')
